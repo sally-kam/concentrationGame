@@ -40,5 +40,4 @@
 -add click function
 -add shuffle function
 
-## Wireframe 
 

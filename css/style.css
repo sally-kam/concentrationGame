@@ -1,4 +1,5 @@
 body {
+    height:5vh;
     background-image: url(/imgs/background.jpg);
     background-position:center;
     height: 100vh;
@@ -23,11 +24,30 @@ section {
     display: grid;
     grid-template-columns: repeat(4, 20vmin);
     grid-template-rows: repeat(4, 20vmin);
-    background-color: lightgray;
+    background-color: transparent;
     border-radius: 5vmin;
     text-align: center;
 }
-
+.timer{
+    margin-top: 2vmin;
+    padding: 1.5vmin;
+    background-color: palevioletred;
+    color: white;
+    border-radius: 2vmin;
+    font-size: 4vmin;
+}
+#cardBox {
+    height: 125px;
+    width: 125px;
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    align-self: center;
+    border: solid black
+}
+.buttons{
+    margin:auto;
+}
 button {
     margin-top: 2vmin;
     padding: 1.5vmin;
