@@ -7,15 +7,20 @@ body {
     justify-content: center;
     align-items: center;
 }
-#cardBox {
-
+#cardBox>div{
+    margin: 3vmin;
+    border: 1vmin solid red;
+    border-radius: 50%;
+    background-color: darkgrey;
+    background-size: contain;
 }
 #allCards {
     display: grid;
-    grid-template-columns: repeat(3, 20vmin);
-    grid-template-rows: repeat(3, 20vmin);
-    background-color: lightgrey;
+    grid-template-columns: repeat(4, 20vmin);
+    grid-template-rows: repeat(4, 20vmin);
+    background-color: lightgray;
     border-radius: 5vmin;
+    text-align: center;
 }
 
 button {
