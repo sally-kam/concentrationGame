@@ -40,4 +40,4 @@
 -add click function
 -add shuffle function
 
-
+add testing
