@@ -10,40 +10,21 @@
     <title>Sally's Game</title>
 </head>
 <body>
-    <!-- <div class="container">
-    <h1>Sally's Game of Cat Concentration</h1>
-    <h2>Match Cards to Win the Game!</h2> -->
-
-    <div class="container">
-        <header>
-            <h1>Sally's Game of Cat Concentration</h1>
-        <section class="memory-game">
-            
-            <div class = "memory-card" data-pair="birman-cat"> <img class="front-face" src="imgs/birman-cat.png" ><img class = "back-face" src="imgs/pawprint.png"/></div>
-            <div class = "memory-card" data-pair="birman-cat"> <img class="front-face" src="imgs/birman-cat.png"><img class = "back-face" src="imgs/pawprint.png"/></div>
-            <div class = "memory-card" data-pair="bombay-cat"> <img class="front-face" src="imgs/bombay-cat.png"><img class = "back-face" src="imgs/pawprint.png"/></div>
-            <div class = "memory-card" data-pair="bombay-cat"> <img class="front-face" src="imgs/bombay-cat.png"><img class = "back-face" src="imgs/pawprint.png"/></div>
-            <div class = "memory-card" data-pair="British-Shorthair-Cat-PNG-File"> <img class="front-face" src="imgs/British-Shorthair-Cat-PNG-File.png"><img class = "back-face" src="imgs/pawprint.png"/></div>
-            <div class = "memory-card" data-pair="British-Shorthair-Cat-PNG-File"> <img class="front-face" src="imgs/British-Shorthair-Cat-PNG-File.png"><img class = "back-face" src="imgs/pawprint.png"/></div>
-            <div class = "memory-card" data-pair="Golden-Abyssinian-Cat-PNG-File"> <img class="front-face" src="imgs/Golden-Abyssinian-Cat-PNG-File.png"><img class = "back-face" src="imgs/pawprint.png"/></div>
-            <div class = "memory-card" data-pair="Golden-Abyssinian-Cat-PNG-File"> <img class="front-face" src="imgs/Golden-Abyssinian-Cat-PNG-File.png"><img class = "back-face" src="imgs/pawprint.png"/></div>
-            <div class = "memory-card" data-pair="Maine-Coon-Cat-PNG-Free-Download"> <img class="front-face" src="imgs/Maine-Coon-Cat-PNG-Free-Download.png"><img class = "back-face" src="imgs/pawprint.png"/></div>
-            <div class = "memory-card" data-pair="Maine-Coon-Cat-PNG-Free-Download"> <img class="front-face" src="imgs/Maine-Coon-Cat-PNG-Free-Download.png"><img class = "back-face" src="imgs/pawprint.png"/></div>
-            <div class = "memory-card" data-pair="Persian-Cat-Transparent"> <img class="front-face" src="imgs/Persian-Cat-Transparent.png"><img class = "back-face" src="imgs/pawprint.png"/></div>
-            <div class = "memory-card" data-pair="Persian-Cat-Transparent"> <img class="front-face" src="imgs/Persian-Cat-Transparent.png"><img class = "back-face" src="imgs/pawprint.png"/></div>
-            <div class = "memory-card" data-pair="snowshoe-cat"> <img class="front-face" src="imgs/snowshoe-cat.png"><img class = "back-face" src="imgs/pawprint.png"/></div>
-            <div class = "memory-card" data-pair="snowshoe-cat"> <img class="front-face" src="imgs/snowshoe-cat.png"><img class = "back-face" src="imgs/pawprint.png"/></div>
-            <div class = "memory-card" data-pair="Sphynx-Cat-PNG-Image"> <img class="front-face" src="imgs/Sphynx-Cat-PNG-Image.png"><img class = "back-face" src="imgs/pawprint.png"/></div>
-            <div class = "memory-card" data-pair="Sphynx-Cat-PNG-Image"> <img class="front-face" src="imgs/Sphynx-Cat-PNG-Image.png"><img class = "back-face" src="imgs/pawprint.png"/></div>
-        </main> 
-        <section id="timer">
-            30 seconds
-        </section>
-        <section class="buttons">
-            <button id="start">Start Game</button>
-            <button id="restart">Play Again</button>
-        </section>
-    </main>
+            <main class="main">
+                <h1>Sally's Game of Cat Concentration</h1>
+                <h2>Score: <span id="result"></span></h2>
+                <div class="grid"></div>
+                <div class="timer"></div>
+                <div class="modal">
+                    <div class="modal-content">
+                      <span class="modal-close">&times;</span>
+                      <p class="modal-message"></p>
+                    </div>
+                  </div>
+                <button id="start">Start Game</button>
+                <button id="stop">Play Again</button>
+                <p id="result"></p>
+            </main>
 </body>
 <footer>
     game created by Sally Kam

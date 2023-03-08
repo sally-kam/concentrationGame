@@ -3,10 +3,10 @@
     margin:0;
     box-sizing: border-box;
 }
-body {
+.main {
     background-image: url(/imgs/background.jpg);
     height: 100vh;
-    display: flex;
+    display: grid;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -15,20 +15,39 @@ body {
     background-attachment: fixed;
     overflow: hidden;
     text-align: center;
-}
-img {
-    width:80px;
-    image-rendering: auto;
+    margin:auto;
 }
 
-.memory-game {
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color: #545566;
+    box-sizing: border-box;
+  }
+  
+h2 {
+    font-size: 2vmin;
+}
+  img {
+    height: 100px;
+    width: 80px;
+    border: solid black;
+    background-color: #545566;
+  }
+
+.grid {
     display: grid;
     grid-template-columns: repeat(4, 20vmin);
     grid-template-rows: repeat(4, 20vmin);
     background-color: transparent;
     border-radius: 5vmin;
     text-align: center;
+    margin:auto;
     perspective: 1000px;
+    position: relative;
+    width:100%;
+    display: grid;
 
 }
 #timer{
@@ -41,35 +60,42 @@ img {
     display: flex;
     text-align: center;
 }
-
-.memory-card{
-    transform: scale(1);
-    transform-style: preserve-3d;
-    transition: transform .5s;
-
-}
-.memory-card:active {
-    transform: scale(0.97);
-    transition: transform .2s;
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
   }
-
-.memory-card, .front {
-    height: 12vmin;
-    width: 12vmin;
-    display: grid;
-    justify-content: space-between;
-    justify-self: center;
-    align-self: center;
-    border: solid black;
-    background-color: transparent;
-    position:relative;
-}
-
-.memory-card.flip {
-    transform: rotateY(180deg);
+  
+  .modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
   }
+  
+  .modal-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .modal-close:hover,
+  .modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
 
-.buttons{
+/* .buttons{
     margin:auto;
     text-align: center;
 }
@@ -92,7 +118,7 @@ button {
     flex-direction:row;
     align-items: center;
     text-align: center;
-  }
+  } */
 
 
  
@@ -107,7 +133,9 @@ h1 {
     font-size: 1.5vmin;
 }
 
-
+footer {
+    text-align: center;
+}
 
 
 section img {
@@ -116,24 +144,5 @@ section img {
     cursor: pointer;
 }
 
-/* section img:hover {
-    transform: scale(1.1);
-    transition: transform 150ms;
-} */
 
-.front-face,
-.back-face {
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  position: absolute;
-  border-radius: 5px;
-  background: brown;
-  backface-visibility: hidden;
-
-}
-
-.front-face {
-    transform: rotateY(180deg);
-  }
   
