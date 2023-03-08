@@ -22,10 +22,9 @@ const cardsArray = [
 
   let timer;
   let timerId;
-  let startTime;
   let secondsRemaining = 10;
   const grid = document.querySelector('.grid');
-  const resultDisplay = document.querySelector('#result');
+  const resultDisplay = document.querySelector('.result');
   let cardsChosen = [];
   let cardsChosenId = [];
   const cardsWon = [];
@@ -54,7 +53,6 @@ const cardsArray = [
   }
 function render() {
  stopTimer();
- updateTimer();
 }
   function checkForMatch() {
     let cards = document.querySelectorAll('img');
@@ -77,7 +75,7 @@ function render() {
     }
     cardsChosen = [];
     cardsChosenId = [];
-    resultDisplay.textContent = cardsWon.length;
+    resultDisplay.textContent = 'Score: ' + cardsWon.length + '/8';
 
     if (cardsWon.length === cardsArray.length / 2) {
       resultDisplay.textContent = 'Congratulations! You found them all!';
@@ -95,45 +93,21 @@ function render() {
   }
 
   function startTimer() {
-    startTime = Date.now(); // set the start time to the current time
-    timerId = setInterval(updateTimer, 1000);
     timer = setInterval(() => {
       secondsRemaining--;
       timerEl.textContent = `Time: ${secondsRemaining}s`;
   
-      if (secondsRemaining === 0) {
-        clearInterval(timer);
+      if (secondsRemaining < 0) {
+        clearInterval(timerId);
         showMessage("Time's up!");
-        stopTimer();
+        timerEl.textContent = `STOP TIME`;
       }
-      stopTimer();
     }, 1000);
   }
-  
-  function stopTimer() {
-    clearInterval(timerId);
-    clearInterval(remainingTime)
-  }
-  function updateTimer() {
-    const elapsedTime = Math.floor((Date.now() - startTime) / 1000); // calculate the elapsed time in seconds
-    const remainingTime = Math.max(0, secondsRemaining - elapsedTime); // calculate remaining time
 
-    timerEl.textContent = `Time: ${elapsedTime} seconds`; // update the display with the elapsed time
-    if (remainingTime === 0) {
-        clearInterval(timerId);
-        showMessage("Time's up!");
-        clearInterval(timerId);
-      }  
-}
-function clearTimer() {
-    clearInterval(timerId);
-    secondsRemaining = 0;
-    timerEl.textContent = "Time: ";
-  }
   function showMessage(msg) {
     message.textContent = msg;
     modal.style.display = "block";
-    stopTimer();
   }
   
   function hideMessage() {

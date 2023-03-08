@@ -128,9 +128,9 @@ h1 {
     font-size: 3.5vmin;
 }
 
-#timer, h2 {
-    font-family: 'press start 2p', sans-serif;
-    font-size: 1.5vmin;
+.timer, h2, .result {
+    font-size: 2.5vmin;
+    background-color: white;
 }
 
 footer {
@@ -143,6 +143,4 @@ section img {
     width: 10vmin;
     cursor: pointer;
 }
-
-
   
