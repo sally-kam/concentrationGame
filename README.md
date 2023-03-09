@@ -41,3 +41,59 @@
 -add shuffle function
 
 add testing
+
+# Level 1 Heading
+## Level 2 Heading
+### Level 3 Heading
+#### Level 4 Heading
+##### Level 5 Heading
+###### Level 6 Heading# Level 1 Heading
+---
+
+Thank you for showing up today project week is streesful.
+
+![Markdown-mark](imgs/gamescreenshot.png)
+
+[link to game](http://)
+
+* First list item
+* Second list item
+* Third list item
+
+1. First list item
+1. Second list item
+1. Third list item
+
+1. Parent list item 1
+1. Parent list item 2
+ a. Child list item a
+ b. Child list item b
+1. Parent list item 3
+    * Child item 1 
+    * Child item 2
+
+| First Name | Last Name | Age |
+| :--------- | :-------: | --: |
+| John       |    Doe    |  28 |
+| Jane       |    Doe    |  52 |
+
+Strikethrough text ~~like this~~ using a pair of double tildes
+
+Highlight text ==like this== using a pair of double equality signs
+
+```js
+console.log("hello world");
+```
+
+```html
+hi
+```
+
+
+
+
+
+
+
+
+
