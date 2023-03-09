@@ -35,6 +35,8 @@ const cardsArray = [
   const close2 = timeModal.getElementsByClassName('close')[0];
   const startBtn = document.getElementById("startBtn");
   const againBtn = document.getElementById("playAgainBtn");
+  const audio = new Audio("audio/meow1.mp3");
+  const backgroundMusic = new Audio("audio/backgroundmusic.mp3");
 
 //   card.addEventListener('click', function() {
 //     card.classList.toggle('flipped');
@@ -84,6 +86,7 @@ window.onclick = function(event) {
   }
 
   function startGame() {
+    backgroundMusic.play();
     startModal.style.display = "none";
     startTimer();
         // Start the timer and the game logic here
@@ -132,6 +135,7 @@ function render() {
   }
 
   function flipCard(card) {
+    audio.play();
     let cardId = this.getAttribute('data-id');
     cardsChosen.push(cardsArray[cardId].name);
     cardsChosenId.push(cardId);
