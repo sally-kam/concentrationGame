@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
-    <script defer src="js/game.js"></script>
-    <title>Sally's Game</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
+  <script defer src="js/game.js"></script>
+  <title>Sally's Game</title>
 </head>
+
 <body>
-            <main class="main">
-                <h1>Cat Concentration</h1>
-                <div>MATCH THE PAIRS</div>
-                <div class="modal" id="startModal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                      <h2 class="popup">Welcome to Cat Concentration!</h2>
-                      <p class="popup">Press the start button to begin the game</p>
-                      <button id="startBtn" onclick="startGame()">Start Game</button>
-                    </div>
-                  </div>
-                <div class="result"> Score: 0/8</div>
-                <div class="timer"></div>
-                <div class="grid"></div>
-                <div class="modal" id="timeModal">
-                    <div class="modal-content">
-                      <span class="modal-close">&times;</span>
-                      <p class="popup">Times up!</p>
-                      <button id="playAgainBtn" onclick="startGame()">Play Again</button>
-                    </div>
-                  </div>
-            </main>
+  <audio id="backgroundMusic" loop>
+    <source src="audio/backgroundmusic.mp3" type="audio/mp3">
+  </audio>
+  <main class="main">
+    <h1>Cat Concentration</h1>
+    <div>MATCH THE PAIRS</div>
+    <div class="modal" id="startModal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="popup">Welcome to Cat Concentration ᓚᘏᗢ </h2>
+        <p class="popup">Press the start button to begin the game</p>
+        <button id="startBtn" onclick="startGame()">Start Game</button>
+      </div>
+    </div>
+    <div class="result"> Score: 0/8</div>
+    <div class="timer"></div>
+    <div class="grid"></div>
+    <div class="modal" id="timeModal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <p class="popup">Times up!</p>
+        <button id="playAgainBtn" onclick="startGame()">Play Again</button>
+      </div>
+    </div>
+    <div class="modal" id="winModal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <p class="popup">Congratulations! You found them all!</p>
+        <button id="newGameBtn" onclick="startGame()">Play Again</button>
+      </div>
+  </main>
 </body>
 <footer>
-    game created by Sally Kam
+  game created by Sally Kam
 </footer>
+
 </html>

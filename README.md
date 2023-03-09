@@ -1,4 +1,4 @@
-# Sally's Game of Cat Concentration 
+# Cat Concentration 
 ## Concentration is a matching card game where all the cards are laid out face down on the screen and two cards are flipped face up for each turn. The goal is to match the pairs of cards within the time limit.
 
 
