@@ -36,6 +36,22 @@ const cardsArray = [
   const startBtn = document.getElementById("startBtn");
   const againBtn = document.getElementById("playAgainBtn");
 
+//   card.addEventListener('click', function() {
+//     card.classList.toggle('flipped');
+//   });
+
+  // Select all the cards
+const cards = document.querySelectorAll('.grid-item');
+
+// Loop through all the cards and add a click event listener to each
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+      flipCard(card);
+    });
+  });
+
+
+  
   startBtn.addEventListener("click", function() {
     // hide the start game modal
     startModal.style.display = "none";
@@ -77,7 +93,7 @@ window.onclick = function(event) {
   }
 
   function startGame() {
-    startmodal.style.display = "none";
+    startModal.style.display = "none";
     startTimer();
         // Start the timer and the game logic here
   }
@@ -88,6 +104,7 @@ window.onclick = function(event) {
       card.setAttribute('data-id', i);
       card.addEventListener('click', flipCard);
       grid.appendChild(card);
+
     }
   }
 function render() {
@@ -123,7 +140,7 @@ function render() {
     }
   }
 
-  function flipCard() {
+  function flipCard(card) {
     let cardId = this.getAttribute('data-id');
     cardsChosen.push(cardsArray[cardId].name);
     cardsChosenId.push(cardId);
