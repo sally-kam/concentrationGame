@@ -1,26 +1,26 @@
 //----- constants -----/
 //-define the array of cards
 const cardsArray = [
-    { name: 'birman', img: 'imgs/birman.png'},
-    { name: 'birman', img: 'imgs/birman.png'},
-    { name: 'bombay', img: 'imgs/bombay.png'},
-    { name: 'bombay', img: 'imgs/bombay.png'},
-    { name: 'british', img: 'imgs/British.png'},
-    { name: 'british', img: 'imgs/British.png'},
-    { name: 'golden', img: 'imgs/Golden.png'},
-    { name: 'golden', img: 'imgs/Golden.png'},
-    { name: 'maine', img: 'imgs/mainecoon.png'},
-    { name: 'maine', img: 'imgs/mainecoon.png'},
-    { name: 'persian', img: 'imgs/persian.png'},
-    { name: 'persian', img: 'imgs/persian.png'},
-    { name: 'snowshoe', img: 'imgs/snowshoe.png'},
-    { name: 'snowshoe', img: 'imgs/snowshoe.png'},
-    { name: 'sphynx', img: 'imgs/sphynx.png'},
-    { name: 'sphynx', img: 'imgs/sphynx.png'},
+    { name: 'cat1', img: 'imgs/cat1.png'},
+    { name: 'cat1', img: 'imgs/cat1.png'},
+    { name: 'cat2', img: 'imgs/cat2.png'},
+    { name: 'cat2', img: 'imgs/cat2.png'},
+    { name: 'cat3', img: 'imgs/cat3.png'},
+    { name: 'cat3', img: 'imgs/cat3.png'},
+    { name: 'cat4', img: 'imgs/cat4.png'},
+    { name: 'cat4', img: 'imgs/cat4.png'},
+    { name: 'cat5', img: 'imgs/cat5.png'},
+    { name: 'cat5', img: 'imgs/cat5.png'},
+    { name: 'cat6', img: 'imgs/cat6.png'},
+    { name: 'cat6', img: 'imgs/cat6.png'},
+    { name: 'cat7', img: 'imgs/cat7.png'},
+    { name: 'cat7', img: 'imgs/cat7.png'},
+    { name: 'cat8', img: 'imgs/cat8.png'},
+    { name: 'cat8', img: 'imgs/cat8.png'},
   ];
   let timer;
   let timerId;
-  let secondsRemaining = 90;
+  let secondsRemaining = 60;
   const grid = document.querySelector('.grid');
   const resultDisplay = document.querySelector('.result');
   let cardsChosen = [];
@@ -55,10 +55,6 @@ cards.forEach(card => {
   startBtn.addEventListener("click", function() {
     // hide the start game modal
     startModal.style.display = "none";
-  
-    // start the timer and game logic
-    startTimer();
-    startGame();
   });
 
   againBtn.addEventListener('click', function () {
@@ -66,9 +62,7 @@ cards.forEach(card => {
     location.reload();
   });
 
-//   close2.onclick = function() {
-//     timesModal.style.display = "none";
-//   }
+
 // When the user clicks the button, open the modal 
 window.onload = function() {
     startModal.style.display = "block";
@@ -84,10 +78,7 @@ window.onclick = function(event) {
       startModal.style.display = "none";
     }
   }
-  function init() {
-    timer = null;
-    shuffle();
-  }
+
   function shuffle() {
     cardsArray.sort(() => 0.5 - Math.random()); 
   }
@@ -151,13 +142,13 @@ function render() {
   }
 
   function startTimer() {
-    timer = setInterval(() => {
+    timer = setInterval(function() {
       secondsRemaining--;
       timerEl.textContent = `Time: ${secondsRemaining} seconds`;
   
       if (secondsRemaining < 0) {
         timesModal.style.display= "block",
-        clearInterval(timerId),
+        clearInterval(timer),
         timerEl.textContent = `STOP TIME`
       }
     }, 1000);
@@ -182,7 +173,7 @@ function render() {
 
 
   createBoard();
-  init();
+  shuffle();
   render();
 
 

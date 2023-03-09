@@ -4,14 +4,14 @@
     box-sizing: border-box;
 }
 .main {
-    background-image: url(/imgs/background.jpg);
+    background-image: url(/imgs/background5.jpg);
+    background-position: bottom;
     height: 100vh;
     display: grid;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-size: cover;
-    background-position: center;
     background-attachment: fixed;
     overflow: hidden;
     text-align: center;
@@ -27,11 +27,6 @@
   }
   
 
-  img {
-    height: 100px;
-    width: 80px;
-    border: solid black;
-  }
 
 .grid {
     display: grid;
@@ -41,12 +36,9 @@
     border-radius: 5vmin;
     text-align: center;
     margin:auto;
-    perspective: 1000px;
+    perspective: 100px;
     position: relative;
     width:100%;
-    display: grid;
-    background-color: white;
-
 }
 #timer{
     margin: auto;
@@ -103,13 +95,14 @@ button {
     position: relative;
     overflow: hidden;
     border: none;
-    background: peru;
+    background-color:lightcoral;
     border-radius: 12px;
     border: none;
     padding: 0;
     outline-offset: 4px;
     width: 25vmin;
     font-size: 4vmin;
+    color: white
   }
   section {
     display: flex;
@@ -137,9 +130,14 @@ footer {
 
 img {
     margin: auto;
-    width: 10vmin;
+    width: 13vmin;
+    height: 13vmin;
     cursor: pointer;
     transform: scale(1);
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 
 }
 img:active {
@@ -151,6 +149,13 @@ img.flip {
     transform: rotateY(180deg);
 }
 
-.grid {
+img:hover {
+  transform: scale(1.1);
+  transition: transform 150ms;
+}
 
+@keyframes floating {
+  from { transform: translate(0,  0px); }
+  65%  { transform: translate(0, 15px); }
+  to   { transform: translate(0, -0px); }    
 }
