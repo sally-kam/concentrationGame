@@ -4,11 +4,11 @@
   box-sizing: border-box;
 }
 body{
-  background-image: url(/imgs/background1.jpg);
+  background-image: url(../imgs/background1.jpg);
   background-position:bottom;
 
 }
-.main {
+main {
   height: 100vh;
   display: grid;
   flex-direction: column;
@@ -127,6 +127,8 @@ h1 {
 
 footer {
   text-align: center;
+  color: white;
+  font-size: 5px;
 }
 
 .popup {
