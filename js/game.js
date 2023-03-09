@@ -18,7 +18,6 @@ const cardsArray = [
     { name: 'sphynx', img: 'imgs/sphynx.png'},
     { name: 'sphynx', img: 'imgs/sphynx.png'},
   ];
-
   let timer;
   let timerId;
   let secondsRemaining = 90;
