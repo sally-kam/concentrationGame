@@ -12,17 +12,25 @@
 <body>
             <main class="main">
                 <h1>Cat Concentration</h1>
-                <h2>MATCH THE PAIRS</h2>
+                <div>MATCH THE PAIRS</div>
+                <div class="modal" id="startModal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                      <h2 class="popup">Welcome to Cat Concentration!</h2>
+                      <p class="popup">Press the start button to begin the game</p>
+                      <button id="startBtn" onclick="startGame()">Start Game</button>
+                    </div>
+                  </div>
                 <div class="result"> Score: 0/8</div>
                 <div class="timer"></div>
                 <div class="grid"></div>
-                <div class="modal">
+                <div class="modal" id="timeModal">
                     <div class="modal-content">
                       <span class="modal-close">&times;</span>
-                      <p class="modal-message"></p>
+                      <p class="popup">Times up!</p>
+                      <button id="playAgainBtn" onclick="startGame()">Play Again</button>
                     </div>
                   </div>
-                <button id="start">Start Game</button>
             </main>
 </body>
 <footer>

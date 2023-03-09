@@ -1,6 +1,5 @@
 //----- constants -----/
 //-define the array of cards
-document.addEventListener('DOMContentLoaded', () => {
 const cardsArray = [
     { name: 'birman', img: 'imgs/birman.png'},
     { name: 'birman', img: 'imgs/birman.png'},
@@ -22,7 +21,7 @@ const cardsArray = [
 
   let timer;
   let timerId;
-  let secondsRemaining = 10;
+  let secondsRemaining = 90;
   const grid = document.querySelector('.grid');
   const resultDisplay = document.querySelector('.result');
   let cardsChosen = [];
@@ -31,9 +30,45 @@ const cardsArray = [
   const timerEl = document.querySelector(".timer");
   const modal = document.querySelector(".modal");
   const message = document.querySelector(".modal-message");
+  const startModal = document.getElementById("startModal");
+  const close1 = startModal.getElementsByClassName('close')[0];
+  const timesModal = document.getElementById("timeModal");
+  const close2 = timeModal.getElementsByClassName('close')[0];
+  const startBtn = document.getElementById("startBtn");
+  const againBtn = document.getElementById("playAgainBtn");
 
+  startBtn.addEventListener("click", function() {
+    // hide the start game modal
+    startModal.style.display = "none";
+  
+    // start the timer and game logic
+    startTimer();
+    startGame();
+  });
 
+  againBtn.addEventListener('click', function () {
+    timesModal.style.display = 'none';
+    location.reload();
+  });
 
+//   close2.onclick = function() {
+//     timesModal.style.display = "none";
+//   }
+// When the user clicks the button, open the modal 
+window.onload = function() {
+    startModal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  close1.onclick = function() {
+    startModal.style.display = "none";
+  }
+  // When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+      startModal.style.display = "none";
+    }
+  }
   function init() {
     timer = null;
     shuffle();
@@ -42,6 +77,11 @@ const cardsArray = [
     cardsArray.sort(() => 0.5 - Math.random()); 
   }
 
+  function startGame() {
+    startmodal.style.display = "none";
+    startTimer();
+        // Start the timer and the game logic here
+  }
   function createBoard() {
     for (let i = 0; i < cardsArray.length; i++) {
       let card = document.createElement('img');
@@ -79,6 +119,8 @@ function render() {
 
     if (cardsWon.length === cardsArray.length / 2) {
       resultDisplay.textContent = 'Congratulations! You found them all!';
+      timerEl.textContent = `STOP TIME`
+      stopTimer();
     }
   }
 
@@ -95,12 +137,12 @@ function render() {
   function startTimer() {
     timer = setInterval(() => {
       secondsRemaining--;
-      timerEl.textContent = `Time: ${secondsRemaining}s`;
+      timerEl.textContent = `Time: ${secondsRemaining} seconds`;
   
       if (secondsRemaining < 0) {
-        clearInterval(timerId);
-        showMessage("Time's up!");
-        timerEl.textContent = `STOP TIME`;
+        timesModal.style.display= "block",
+        clearInterval(timerId),
+        timerEl.textContent = `STOP TIME`
       }
     }, 1000);
   }
@@ -108,6 +150,7 @@ function render() {
   function showMessage(msg) {
     message.textContent = msg;
     modal.style.display = "block";
+
   }
   
   function hideMessage() {
@@ -117,12 +160,14 @@ function render() {
   // Add event listener to close button in modal
   document.querySelector(".modal-close").addEventListener("click", hideMessage);
   
-  startTimer();
+  function stopTimer() {
+    clearInterval(timer);
+  }
 
 
   createBoard();
   init();
   render();
-});
+
 
 
