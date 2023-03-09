@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .main {
-    background-image: url(/imgs/background5.jpg);
+    background-image: url(/imgs/background7.jpg);
     background-position: bottom;
     height: 100vh;
     display: grid;
@@ -130,8 +130,8 @@ footer {
 
 img {
     margin: auto;
-    width: 13vmin;
-    height: 13vmin;
+    width: 15vmin;
+    height: 12vmin;
     cursor: pointer;
     transform: scale(1);
     animation-name: floating;

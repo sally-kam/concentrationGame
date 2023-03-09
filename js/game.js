@@ -91,7 +91,7 @@ window.onclick = function(event) {
   function createBoard() {
     for (let i = 0; i < cardsArray.length; i++) {
       let card = document.createElement('img');
-      card.setAttribute('src', 'imgs/pawprint.png');
+      card.setAttribute('src', 'imgs/pawprint1.png');
       card.setAttribute('data-id', i);
       card.addEventListener('click', flipCard);
       grid.appendChild(card);
@@ -107,8 +107,8 @@ function render() {
     const secondCard = cardsChosenId[1];
 
     if (firstCard == secondCard) {
-      cards[firstCard].setAttribute('src', 'imgs/pawprint.png');
-      cards[secondCard].setAttribute('src', 'imgs/pawprint.png');
+      cards[firstCard].setAttribute('src', 'imgs/pawprint1.png');
+      cards[secondCard].setAttribute('src', 'imgs/pawprint1.png');
       setTimeout(100);
     } else if (cardsChosen[0] === cardsChosen[1]) {
       setTimeout(100);
@@ -116,8 +116,8 @@ function render() {
       cards[secondCard].removeEventListener('click', flipCard);
       cardsWon.push(cardsChosen);
     } else {
-      cards[firstCard].setAttribute('src', 'imgs/pawprint.png');
-      cards[secondCard].setAttribute('src', 'imgs/pawprint.png');
+      cards[firstCard].setAttribute('src', 'imgs/pawprint1.png');
+      cards[secondCard].setAttribute('src', 'imgs/pawprint1.png');
       setTimeout(100);
     }
     cardsChosen = [];
