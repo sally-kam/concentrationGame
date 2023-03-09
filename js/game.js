@@ -72,10 +72,15 @@ newGameBtn.addEventListener('click', function () {
 
 
 // When the user clicks the button, open the modal 
+
+function init(){
+  startModal.style.display = "block";
+  backgroundMusic.loop = true;
+}
+
 window.onload = function () {
   startModal.style.display = "block";
   backgroundMusic.loop = true;
-  backgroundMusic.play();
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -97,6 +102,7 @@ function shuffle() {
 function startGame() {
   startModal.style.display = "none";
   startTimer();
+  backgroundMusic.play();
 }
 function createBoard() {
   for (let i = 0; i < cardsArray.length; i++) {
@@ -109,7 +115,7 @@ function createBoard() {
   }
 }
 function render() {
-  stopTimer();
+  init();
 }
 function checkForMatch() {
   let cards = document.querySelectorAll('img');
@@ -132,7 +138,7 @@ function checkForMatch() {
   }
   cardsChosen = [];
   cardsChosenId = [];
-  resultDisplay.textContent = 'Score: ' + cardsWon.length + '/8';
+  Display.textContent = 'Score: ' + cardsWon.length + '/8';
 
   if (cardsWon.length === cardsArray.length / 2) {
     winModal.style.display = 'block';
@@ -181,7 +187,7 @@ function stopTimer() {
   clearInterval(timer);
 }
 
-
+startGame();
 createBoard();
 shuffle();
 render();
