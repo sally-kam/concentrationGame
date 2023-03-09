@@ -20,7 +20,7 @@ const cardsArray = [
 ];
 let timer;
 let timerId;
-let secondsRemaining = 90;
+let secondsRemaining = 61;
 const grid = document.querySelector('.grid');
 const resultDisplay = document.querySelector('.result');
 let cardsChosen = [];
@@ -58,6 +58,7 @@ cards.forEach(card => {
 startBtn.addEventListener("click", function () {
   // hide the start game modal
   startModal.style.display = "none";
+  startTimer();
 });
 
 againBtn.addEventListener('click', function () {
@@ -76,12 +77,13 @@ newGameBtn.addEventListener('click', function () {
 function init(){
   startModal.style.display = "block";
   backgroundMusic.loop = true;
+  backgroundMusic.play();
 }
 
-window.onload = function () {
-  startModal.style.display = "block";
-  backgroundMusic.loop = true;
-}
+// window.onload = function () {
+//   startModal.style.display = "block";
+//   backgroundMusic.loop = true;
+// }
 
 // When the user clicks on <span> (x), close the modal
 close1.onclick = function () {
@@ -101,7 +103,7 @@ function shuffle() {
 // function when you click the start game function
 function startGame() {
   startModal.style.display = "none";
-  startTimer();
+  backgroundMusic.loop = true;
   backgroundMusic.play();
 }
 function createBoard() {
@@ -191,6 +193,6 @@ startGame();
 createBoard();
 shuffle();
 render();
-
+init();
 
 

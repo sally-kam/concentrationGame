@@ -3,17 +3,17 @@
   margin: 0;
   box-sizing: border-box;
 }
+body{
+  background-image:  url(/imgs/background1.jpg);
+  background-position:bottom;
 
+}
 .main {
-  background-image: url(/imgs/background1.jpg);
-  background-position: bottom;
   height: 100vh;
   display: grid;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-size: cover;
-  background-attachment: fixed;
   overflow: hidden;
   text-align: center;
   margin: auto;
