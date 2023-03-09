@@ -3,12 +3,10 @@
   margin: 0;
   box-sizing: border-box;
 }
-body{
+main {
   background-image: url(../imgs/background1.jpg);
   background-position:bottom;
-
-}
-main {
+  background-size: cover;;
   height: 100vh;
   display: grid;
   flex-direction: column;
