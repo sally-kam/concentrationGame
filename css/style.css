@@ -3,9 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+body{
+  background-image: url(./imgs/background7.jpg);
+}
 .main {
-  background-image: url(imgs/background7.jpg);
+  background-image: url(./imgs/background7.jpg);
   background-position: bottom;
   height: 100vh;
   display: grid;
