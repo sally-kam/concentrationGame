@@ -25,7 +25,7 @@ const grid = document.querySelector('.grid');
 const resultDisplay = document.querySelector('.result');
 let cardsChosen = [];
 let cardsChosenId = [];
-const cardsWon = [];
+let cardsWon = [];
 const timerEl = document.querySelector(".timer");
 const modal = document.querySelector(".modal");
 const message = document.querySelector(".modal-message");
@@ -39,9 +39,6 @@ const newGameBtn = document.getElementById("newGameBtn");
 const audio = new Audio("audio/meow1.mp3");
 const backgroundMusic = new Audio("audio/backgroundmusic.mp3");
 
-//   card.addEventListener('click', function() {
-//     card.classList.toggle('flipped');
-//   });
 
 // Select all the cards
 const cards = document.querySelectorAll('.grid-item');
@@ -118,6 +115,7 @@ function createBoard() {
 }
 function render() {
   init();
+  checkForMatch();
 }
 function checkForMatch() {
   let cards = document.querySelectorAll('img');
@@ -125,27 +123,31 @@ function checkForMatch() {
   const secondCard = cardsChosenId[1];
 
   if (firstCard == secondCard) {
+    setTimeout(() => {
     cards[firstCard].setAttribute('src', 'imgs/pawprint1.png');
     cards[secondCard].setAttribute('src', 'imgs/pawprint1.png');
-    setTimeout(100);
+    },100);
   } else if (cardsChosen[0] === cardsChosen[1]) {
-    setTimeout(100);
+    setTimeout(() => {
     cards[firstCard].removeEventListener('click', flipCard);
     cards[secondCard].removeEventListener('click', flipCard);
+  },100);
     cardsWon.push(cardsChosen);
   } else {
+    setTimeout(() => {
     cards[firstCard].setAttribute('src', 'imgs/pawprint1.png');
     cards[secondCard].setAttribute('src', 'imgs/pawprint1.png');
-    setTimeout(100);
+  },100);
   }
   cardsChosen = [];
   cardsChosenId = [];
-  Display.textContent = 'Score: ' + cardsWon.length + '/8';
+  resultDisplay.textContent = 'Score: ' + cardsWon.length + '/8';
 
   if (cardsWon.length === cardsArray.length / 2) {
-    winModal.style.display = 'block';
     timerEl.textContent = `STOP TIME`
+    winModal.style.display = 'block';
   }
+  
 }
 
 function flipCard(card) {
@@ -194,5 +196,7 @@ createBoard();
 shuffle();
 render();
 init();
+checkForMatch();
+
 
 

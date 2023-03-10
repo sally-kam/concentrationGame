@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-main {
+.main {
   background-image: url(../imgs/background1.jpg);
   background-position:bottom;
   background-size: cover;;
@@ -35,8 +35,6 @@ main {
   border-radius: 5vmin;
   text-align: center;
   margin: auto;
-  perspective: 100px;
-  position: relative;
   width: 100%;
 }
 
@@ -100,7 +98,6 @@ button {
   background-color: lightcoral;
   border-radius: 12px;
   border: none;
-  padding: 0;
   outline-offset: 4px;
   width: 25vmin;
   font-size: 4vmin;
