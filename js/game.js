@@ -18,7 +18,9 @@ const cardsArray = [
   { name: 'cat8', img: 'imgs/cat8.png' },
   { name: 'cat8', img: 'imgs/cat8.png' },
 ];
-
+//audio for the meow and the backgroundmusic
+const audio = new Audio("audio/meow1.mp3");
+const backgroundMusic = new Audio("audio/backgroundmusic.mp3");
 
 /*----- state variables -----*/
 let timer;
@@ -40,9 +42,6 @@ const winModal = document.getElementById("winModal");
 const startBtn = document.getElementById("startBtn");
 const againBtn = document.getElementById("playAgainBtn");
 const newGameBtn = document.getElementById("newGameBtn");
-//audio for the meow and the backgroundmusic
-const audio = new Audio("audio/meow1.mp3");
-const backgroundMusic = new Audio("audio/backgroundmusic.mp3");
 const cards = document.querySelectorAll('.grid-item');
 
 
