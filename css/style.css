@@ -61,6 +61,12 @@ button {
 h1 {
   font-family: cursive;
 }
+h2 {
+  font-size: 3.0vmin;
+}
+p {
+  font-size: 2.5vmin;
+}
 
 footer {
   text-align: center;
