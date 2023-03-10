@@ -1,8 +1,6 @@
-<main align="center">
+<main align="center" style="font-family: 'cursive';">
 
-<h1 style="font-family: 'cursive';">
- Cat Concentration
-</h1>
+# Cat Concentration
 
 ---
 
