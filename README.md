@@ -50,7 +50,12 @@ This browser-based game is a cat-themed matching card game where all the cards a
 
 ## Interesting Code
 
-The checkForMatch function determines if the player chose 2 cards that are matched. 
+The checkForMatch function determines if the player chose 2 cards that are matched. With this function, it had the following actions:
+* flips the card back if the same card is clicked twice
+* if the 2 cards are matched, it stays in the flipped card image by removing the click event listener and pushes the card pairs to the cardsWon array.
+* it updates the score results on the display
+* it displays the winning pop-up modal if all the cards are matched
+* uses setTimeout to flip the cards back or remove the click event listener in order for the player to see the flipped cards for 100ms.
 
 ```js
 function checkForMatch() {
@@ -98,6 +103,23 @@ function checkForMatch() {
 }
 ```
 
+The flipCard function is called when the player clicks on the card so the card can flip. With this function it has the following actions:
+* plays a meow sound when a card is clicked
+* calls the checkForMatch function to determine if the 2 cards flipped are a match for 100ms using setTimeout.
+
+```js
+//function to flip the card when its clicked. 
+function flipCard() {
+  audio.play();
+  let cardId = this.dataset.id; //gets the data of the clicked card
+  cardsChosen.push(cardsArray[cardId].name); //// the name of the clicked card is added to the cardsChosen array
+  cardsChosenId.push(cardId); //card ID is added to the cardsChosenId array
+  this.src = cardsArray[cardId].img; //gets the img property from the cardsArray through the cardId index variable.
+  if (cardsChosen.length === 2) {
+    setTimeout(checkForMatch, 500);
+  } //  //if 2 cards are chosen, it gives time for the checkformatch function to detect a match.
+}
+```
 
 
 
