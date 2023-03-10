@@ -1,4 +1,4 @@
-<main align="center" style="font-family: 'cursive';">
+<main align="center" style="font-family: 'cursive'";>
 
 # Cat Concentration
 
@@ -45,6 +45,7 @@ Concentration is a matching card game where all the cards are laid out face down
 * adjust CSS to make the game mobile 
 * add easy, medium, and hard levels to the game
 * add a flip card animation
+* put a reset button during the game if the player wants to start over in the middle of the game
 
 ---
 
