@@ -11,7 +11,7 @@
 ---
 
 ## Description: 
-Concentration is a matching card game where all the cards are laid out face down on the screen and two cards are flipped face up for each turn. The goal is to match the pairs of cards within the time limit.
+This browser-based game is a cat-themed matching card game where all the cards are laid out face down in a 4x4 grid on the screen and the player chooses two cards to flip face up for each turn. The goal is to match the pairs of these cute cats within the time limit!
 
 ---
 
