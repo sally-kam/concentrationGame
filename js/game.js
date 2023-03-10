@@ -18,13 +18,15 @@ const cardsArray = [
   { name: 'cat8', img: 'imgs/cat8.png' },
   { name: 'cat8', img: 'imgs/cat8.png' },
 ];
-/*----- state variables -----*/
 
+
+/*----- state variables -----*/
 let timer;
 let secondsRemaining = 100;
 let cardsChosen = [];
 let cardsChosenId = [];
 let cardsWon = [];
+
 
 /*----- cached elements  -----*/
 const grid = document.querySelector('.grid');
@@ -43,6 +45,7 @@ const audio = new Audio("audio/meow1.mp3");
 const backgroundMusic = new Audio("audio/backgroundmusic.mp3");
 const cards = document.querySelectorAll('.grid-item');
 
+
 /*----- event listeners -----*/
 // Loop through all the cards and add a click event listener to each card
 cards.forEach(card => {
@@ -50,18 +53,18 @@ cards.forEach(card => {
     flipCard(card);
   });
 });
-// hide the start game modal
-startBtn.addEventListener("click", function () {
+// hides the start game modal and starts the game and timer
+startBtn.addEventListener("click", () => {
   startModal.style.display = "none";
   startTimer();
 });
-// hide the times up modal when you lost the game
-againBtn.addEventListener('click', function () {
+// hide the times up modal when you lose the game and time runs out
+againBtn.addEventListener('click', () => {
   timesModal.style.display = 'none';
   location.reload();
 });
 //hides the modal after you win the game
-newGameBtn.addEventListener('click', function () {
+newGameBtn.addEventListener('click', () => {
   winModal.style.display = 'none';
   location.reload();
 })
@@ -101,10 +104,10 @@ function checkForMatch() {
   let cards = document.querySelectorAll('img');
   const firstCard = cardsChosenId[0];
   const secondCard = cardsChosenId[1];
-// if the same card was clicked twice, it can go back to the first image
+  // if the same card was clicked twice, it can go back to the first image
   if (firstCard == secondCard) {
     setTimeout(() => {
-      if (cards[firstCard] && cards[secondCard]) { 
+      if (cards[firstCard] && cards[secondCard]) {
         cards[firstCard].src = 'imgs/pawprint1.png';
         cards[secondCard].src = 'imgs/pawprint1.png';
       }
@@ -112,7 +115,7 @@ function checkForMatch() {
     // if 2 cards chosen are matched, it removes the click event listener to lock them in the flipped image and keeps track of the matched card pairs by pushing.
   } else if (cardsChosen[0] === cardsChosen[1]) {
     setTimeout(() => {
-      if (cards[firstCard] && cards[secondCard]) { 
+      if (cards[firstCard] && cards[secondCard]) {
         cards[firstCard].removeEventListener('click', flipCard);
         cards[secondCard].removeEventListener('click', flipCard);
       }
@@ -155,7 +158,7 @@ function startTimer() {
   timer = setInterval(function () {
     secondsRemaining--;
     timerEl.innerText = 'Time: ' + secondsRemaining + ' seconds';
-// when timer is less than 0, the function stops and displays the losing pop-up modal
+    // when timer is less than 0, the function stops and displays the losing pop-up modal
     if (secondsRemaining < 0) {
       timesModal.style.display = "block",
         clearInterval(timer),
