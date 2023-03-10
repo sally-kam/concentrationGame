@@ -1,10 +1,12 @@
 <main align="center" style="font-family: 'cursive'";>
 
-# Cat Concentration
-
----
+# <strong><em> Cat Concentration </em></strong>
 
 ![Markdown-mark](imgs/gamescreenshot.png)
+
+### [Live Demo](https://sally-kam.github.io/concentrationGame/) 
+
+</main>
 
 ---
 
@@ -21,14 +23,6 @@ Concentration is a matching card game where all the cards are laid out face down
 ![Markdown-mark](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
 
 ---
-
-### [Live Demo](https://sally-kam.github.io/concentrationGame/) 
-
-</main>
-
-
----
-<div style="font-family: 'cursive';">
 
 ## Getting Started: 
 1. Press the <kbd>Start Game</kbd> button to start the game
@@ -99,7 +93,7 @@ function checkForMatch() {
 }
 ```
 
-</div>
+
 
 
 
