@@ -26,7 +26,10 @@ Concentration is a matching card game where all the cards are laid out face down
 
 </main>
 
+
 ---
+<div style="font-family: 'cursive';">
+
 ## Getting Started: 
 1. Press the <kbd>Start Game</kbd> button to start the game
 2. Match the pairs in 60 seconds
@@ -35,7 +38,6 @@ Concentration is a matching card game where all the cards are laid out face down
 5. If you didn't match the pairs before the timer runs out, you lose the game!
 6. Press <kbd>Play Again</kbd> button to play again.
 
-</main>
 ---
 
 ## Next Steps:
@@ -95,6 +97,8 @@ function checkForMatch() {
   }
 }
 ```
+
+</div>
 
 
 
