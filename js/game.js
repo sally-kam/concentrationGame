@@ -22,7 +22,7 @@ const cardsArray = [
 
 /*----- state variables -----*/
 let timer;
-let secondsRemaining = 100;
+let secondsRemaining = 60;
 let cardsChosen = [];
 let cardsChosenId = [];
 let cardsWon = [];

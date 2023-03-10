@@ -1,3 +1,4 @@
+<main align="center">
 # Cat Concentration
 
 ---
@@ -19,12 +20,20 @@ Concentration is a matching card game where all the cards are laid out face down
 ![Markdown-mark](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
 
 ---
-## Getting Started: 
 
 ### [Live Demo](https://sally-kam.github.io/concentrationGame/) 
+</main>
 
-You have 60 seconds to match the pairs. 
+---
+## Getting Started: 
+1. Press the <kbd>Start Game</kbd> button to start the game
+2. Match the pairs in 60 seconds
+3. If you match the pairs before the timer runs out, you win the game!
+4. Press <kbd>New Game</kbd> button to start a new game.
+5. If you didn't match the pairs before the timer runs out, you lose the game!
+6. Press <kbd>Play Again</kbd> button to play again.
 
+</main>
 ---
 
 ## Next Steps:
