@@ -6,11 +6,12 @@
 
 ---
 
-#### Description: Concentration is a matching card game where all the cards are laid out face down on the screen and two cards are flipped face up for each turn. The goal is to match the pairs of cards within the time limit.
+## Description: 
+Concentration is a matching card game where all the cards are laid out face down on the screen and two cards are flipped face up for each turn. The goal is to match the pairs of cards within the time limit.
 
 ---
 
-#### Technologies used:
+## Technologies used:
 ![Markdown-mark](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Markdown-mark](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
 ![Markdown-mark](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
@@ -34,7 +35,7 @@ You have 60 seconds to match the pairs.
 
 ---
 
-### Interesting Code
+## Interesting Code
 
 The checkForMatch function determines if the player chose 2 cards that are matched. 
 
