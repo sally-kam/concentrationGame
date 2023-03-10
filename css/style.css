@@ -110,10 +110,10 @@ img:hover {
   }
 
   50% {
-    transform: translate(0, 15px);
+    transform: translate(0, 10px);
   }
 
   to {
-    transform: translate(0, -0px);
+    transform: translate(0, -1px);
   }
 }
