@@ -100,11 +100,12 @@ function createBoard() {
 }
 //function to check if the 2 flipped cards the player clicked on are matched
 function checkForMatch() {
-  //cards variable selects the img elements and 
+  //cards variable selects the img elements and the 
   let cards = document.querySelectorAll('img');
+  // selects the cards the player has chosen to compare them for a match
   const firstCard = cardsChosenId[0];
   const secondCard = cardsChosenId[1];
-  // if the same card was clicked twice, it can go back to the first image
+  // if the same card was clicked twice, it can flip back to the default card
   if (firstCard == secondCard) {
     setTimeout(() => {
       if (cards[firstCard] && cards[secondCard]) {
@@ -112,7 +113,7 @@ function checkForMatch() {
         cards[secondCard].src = 'imgs/pawprint1.png';
       }
     }, 100);
-    // if 2 cards chosen are matched, it removes the click event listener to lock them in the flipped image and keeps track of the matched card pairs by pushing.
+    // if the 2 cards chosen are matched, it removes the click event listener to lock them in the flipped image and keeps track of the matched card pairs by pushing.
   } else if (cardsChosen[0] === cardsChosen[1]) {
     setTimeout(() => {
       if (cards[firstCard] && cards[secondCard]) {
