@@ -121,6 +121,13 @@ function flipCard() {
 }
 ```
 
+---
+
+## Sharing My Experience
+
+My biggest challenge was the functionality of checking for a match and flipping the card. I had to implement a lot of setTimeout function to make sure the card flips back and remove some event listener methods or if statements for some functions.
+
+My key learning/takeaways from building this browser game is to always check if your function is working with console log at every step so you won't get lost in your code and you would be able to detect the error instead of going back. 
 
 
 
