@@ -24,16 +24,17 @@ const backgroundMusic = new Audio("audio/backgroundmusic.mp3");
 
 /*----- state variables -----*/
 let timer;
-let secondsRemaining = 60;
-let cardsChosen = [];
-let cardsChosenId = [];
-let cardsWon = [];
+let secondsRemaining = 60; //assigns to 60 seconds for countdown
+let cardsChosen = []; //empty array to keep track of the cards the player has chosen
+let cardsChosenId = []; //empty rray to keep track of the cardsId that the player has chosen
+let cardsWon = []; // empty array to keep track of the pairs that are matched.
 
 
 /*----- cached elements  -----*/
 const grid = document.querySelector('.grid');
 const resultDisplay = document.querySelector('.result');
 const timerEl = document.querySelector(".timer");
+const cards = document.querySelectorAll('.grid-item');
 //grabbing the pop up modals for the start of the game, losing the game, and winning the game
 const startModal = document.getElementById("startModal");
 const timesModal = document.getElementById("timeModal");
@@ -42,7 +43,7 @@ const winModal = document.getElementById("winModal");
 const startBtn = document.getElementById("startBtn");
 const againBtn = document.getElementById("playAgainBtn");
 const newGameBtn = document.getElementById("newGameBtn");
-const cards = document.querySelectorAll('.grid-item');
+
 
 
 /*----- event listeners -----*/
@@ -62,7 +63,7 @@ againBtn.addEventListener('click', () => {
   timesModal.style.display = 'none';
   location.reload();
 });
-//hides the modal after you win the game
+//hides the new game modal after you win the game
 newGameBtn.addEventListener('click', () => {
   winModal.style.display = 'none';
   location.reload();
@@ -80,13 +81,7 @@ function init() {
 function shuffle() {
   cardsArray.sort(() => 0.5 - Math.random());
 }
-// function when you click the start game function
-function startGame() {
-  init();
-  startModal.style.display = "none";
-  backgroundMusic.loop = true;
-  backgroundMusic.play();
-}
+
 //function to create the game board by looping over the cardsArray to create a card for each element in the array. then append to the grid area in the html document.
 function createBoard() {
   for (let i = 0; i < cardsArray.length; i++) {
@@ -99,7 +94,7 @@ function createBoard() {
 }
 //function to check if the 2 flipped cards the player clicked on are matched
 function checkForMatch() {
-  //cards variable selects the img elements and the 
+  //cards variable selects the img elements  
   let cards = document.querySelectorAll('img');
   // selects the cards the player has chosen to compare them for a match
   const firstCard = cardsChosenId[0];
@@ -169,7 +164,6 @@ function startTimer() {
 // render function is responsible to call the other functions to initialize and start the game
 function render() {
   checkForMatch();
-  startGame();
   createBoard();
   shuffle();
 }
