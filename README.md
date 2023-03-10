@@ -26,11 +26,14 @@ Concentration is a matching card game where all the cards are laid out face down
 
 ## Getting Started: 
 1. Press the <kbd>Start Game</kbd> button to start the game
+![Markdown-mark](imgs/startscreenshot.png)
 2. Match the pairs in 60 seconds
 3. If you match the pairs before the timer runs out, you win the game!
 4. Press <kbd>New Game</kbd> button to start a new game.
+![Markdown-mark](imgs/newgamescreenshot.png)
 5. If you didn't match the pairs before the timer runs out, you lose the game!
 6. Press <kbd>Play Again</kbd> button to play again.
+![Markdown-mark](imgs/playagainscreenshot.png)
 
 ---
 
