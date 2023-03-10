@@ -124,8 +124,8 @@ function checkForMatch() {
 
   if (firstCard == secondCard) {
     setTimeout(() => {
-    cards[firstCard].setAttribute('src', 'imgs/pawprint1.png');
-    cards[secondCard].setAttribute('src', 'imgs/pawprint1.png');
+    cards[firstCard].src = 'imgs/pawprint1.png';
+    cards[secondCard].src = 'imgs/pawprint1.png';
     },100);
   } else if (cardsChosen[0] === cardsChosen[1]) {
     setTimeout(() => {
@@ -135,8 +135,8 @@ function checkForMatch() {
     cardsWon.push(cardsChosen);
   } else {
     setTimeout(() => {
-    cards[firstCard].setAttribute('src', 'imgs/pawprint1.png');
-    cards[secondCard].setAttribute('src', 'imgs/pawprint1.png');
+    cards[firstCard].src = 'imgs/pawprint1.png';
+    cards[secondCard].src = 'imgs/pawprint1.png';
   },100);
   }
   cardsChosen = [];
@@ -149,6 +149,7 @@ function checkForMatch() {
   }
   
 }
+
 
 function flipCard(card) {
   audio.play();
