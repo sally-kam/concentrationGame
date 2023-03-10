@@ -25,6 +25,7 @@ Concentration is a matching card game where all the cards are laid out face down
 ---
 
 ### [Live Demo](https://sally-kam.github.io/concentrationGame/) 
+
 </main>
 
 ---
